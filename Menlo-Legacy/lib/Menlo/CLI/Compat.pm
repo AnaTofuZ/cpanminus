@@ -453,7 +453,7 @@ sub search_common {
             $self->chat("Found $found->{module} $found->{module_version} which doesn't satisfy $want_version.\n");
         }
     }
-    
+
     return;
 }
 
@@ -977,7 +977,7 @@ sub append_args {
     my($self, $cmd, $phase) = @_;
 
     return $cmd if ref $cmd ne 'ARRAY';
-    
+
     if (my $args = $self->{build_args}{$phase}) {
         $cmd = join ' ', Menlo::Util::shell_quote(@$cmd), $args;
     }
@@ -1163,7 +1163,7 @@ sub chdir {
 sub configure_mirrors {
     my $self = shift;
     unless (@{$self->{mirrors}}) {
-        $self->{mirrors} = [ 'http://www.cpan.org' ];
+        $self->{mirrors} = [ 'https://www.cpan.org' ];
     }
     for (@{$self->{mirrors}}) {
         s!^/!file:///!;

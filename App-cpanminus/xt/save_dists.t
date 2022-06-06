@@ -12,4 +12,7 @@ ok -e "$dir/authors/id/D/DO/DOY/Try-Tiny-0.20.tar.gz";
 run '--test-only', '--save-dists', $dir, 'http://www.cpan.org/authors/id/D/DO/DOY/Try-Tiny-0.21.tar.gz';
 ok -e "$dir/authors/id/D/DO/DOY/Try-Tiny-0.21.tar.gz";
 
+run '--test-only', '--save-dists', $dir, 'https://www.cpan.org/authors/id/D/DO/DOY/Try-Tiny-0.22.tar.gz';
+ok -e "$dir/authors/id/D/DO/DOY/Try-Tiny-0.22.tar.gz";
+
 done_testing;
